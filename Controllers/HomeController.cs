@@ -12,8 +12,10 @@ namespace ASP.NET_Course.Controllers
     {
         public IActionResult Index()
         {
-            throw new ArgumentNullException("test");
-            return View();
+            //throw new ArgumentNullException("test");
+            //return View();
+            //return Content("this is my text");
+            return new JsonResult(new { name = "test" });
         }
 
 

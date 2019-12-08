@@ -59,6 +59,14 @@ namespace ASP.NET_Course
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "aboutPage",
+                    template: "more/{moreInfo?}",
+                    defaults: new { Controller = "About", action = "TellMeMore" });
+            });
         }
     }
 }
