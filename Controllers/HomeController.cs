@@ -12,13 +12,10 @@ namespace ASP.NET_Course.Controllers
     {
         public IActionResult Index()
         {
+            throw new ArgumentNullException("test");
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
